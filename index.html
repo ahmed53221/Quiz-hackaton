@@ -8,72 +8,53 @@
 </head>
 <body>
 
-  <a href="index.html" id="enter-link" aria-label="Enter quiz">Enter Quiz</a>
+<button id="enter-link">Enter Quiz</button>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">Quiz</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Quiz</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="quiz-container" id="quiz" style="display:none;">
 
   <div class="hud">
-  <span id="timer">⏱ 30</span>
-  <span id="score">Score: 0</span>
-</div>
-
-
- 
-
-
-
-  <div class="quiz-container" id="quiz" style="display:none;">
-
-    <div class="hud">
-  <span id="timer">⏱ 30</span>
-  <span id="score">Score: 0</span>
-</div>
-    
-
-    <section id="question-screen" class="screen" style="display:none;">
-      <h2 id="question">Question text</h2>
-      <div class="options" id="options"></div>
-      <p id="progress"></p>
-    </section>
-
-    <section id="result-screen" class="screen" style="display:none;">
-      <h2 id="result-title">Quiz Finished!</h2>
-      <p id="result-score"></p>
-      <p id="result-prize"></p>
-      <p id="result-message"></p>
-      <p id="final-text"></p>
-
-
-     
-    </section>
-   
-<button id="restartBtn">Restart</button>
-<div id="restartPopup" class="popup hidden">
-  <div class="popup-content">
-    <p>Da li stvarno zelis ponovo poceti igricu?</p>
-    <button id="confirmRestart">Da</button>
-    <button id="cancelRestart">Ne</button>
-  </div>
-</div>
-    <a href="about.html" class="btn-about">About us</a>
+    <span id="timer">⏱ 30</span>
+    <span id="score">Score: €0</span>
   </div>
 
-  <div id="prizeDisplay" class="PrizeDisplay"></div>
+  <section id="question-screen" class="screen">
+    <h2 id="question"></h2>
+    <div class="options" id="options"></div>
+  </section>
 
-  <div id="prize-ladder" class="ladder"></div>
+  <section id="result-screen" class="screen" style="display:none;">
+    <h2>Game Over</h2>
+    <p id="final-text"></p>
+  </section>
 
-  <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
-  <audio id="wrongSound" src="incorrect.mp3" preload="auto"></audio>
+  <button id="restartBtn">Restart</button>
 
-  <script src="main.js"></script>
+  <div id="restartPopup" class="popup hidden">
+    <div class="popup-content">
+      <p>Da li stvarno zelis ponovo poceti igricu?</p>
+      <button id="confirmRestart">Da</button>
+      <button id="cancelRestart">Ne</button>
+    </div>
+  </div>
 
+</div>
+
+<div id="prize-ladder" class="ladder"></div>
+
+<audio id="correctSound" src="correct.mp3"></audio>
+<audio id="wrongSound" src="incorrect.mp3"></audio>
+
+<script src="pitanja.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
 
