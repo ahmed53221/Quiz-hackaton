@@ -10,16 +10,16 @@
 
   <nav class="navbar">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Quiz</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Quiz</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <button id="enter-link" class="enter-btn">Enter Quiz</button>
+  <button id="enter-link">Enter Quiz</button>
 
-  <div class="quiz-container" id="quiz">
+  <div class="quiz-container" id="quiz" style="display:none;">
 
     <div class="hud">
       <span id="timer">⏱ 30</span>
@@ -32,7 +32,7 @@
       <p id="progress"></p>
     </section>
 
-    <section id="result-screen" class="screen">
+    <section id="result-screen" class="screen" style="display:none;">
       <h2>Quiz Finished</h2>
       <p id="final-text"></p>
     </section>
@@ -48,17 +48,14 @@
     </div>
 
     <a href="about.html" class="btn-about">About us</a>
-
   </div>
-
-  <div id="prizeDisplay" class="PrizeDisplay"></div>
-  <div id="prize-ladder" class="ladder"></div>
 
   <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
   <audio id="wrongSound" src="incorrect.mp3" preload="auto"></audio>
 
-  <script src="pitanja.js"></script>
-  <script src="main.js"></script>
+  
+  <script src="pitanja.js" defer></script>
+  <script src="main.js" defer></script>
 
 </body>
 </html>
