@@ -1,3 +1,16 @@
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+let questionsCopy = window.questions.slice();
+
+shuffle(questionsCopy);
+
+window.quizQuestions = questionsCopy.slice(0, 15);
+
 
 let time = 30;
 let timerInterval;
