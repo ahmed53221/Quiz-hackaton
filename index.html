@@ -3,33 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz </title>
+  <title>Quiz</title>
   <link rel="stylesheet" href="tobefilled.css" />
 </head>
 <body>
-  <a href="index.html id="enter-link" aria-label="Enter quiz></a>
+
+  <a href="index.html" id="enter-link" aria-label="Enter quiz">Enter Quiz</a>
+
   <nav class="navbar">
     <ul>
-      <li><a href="index.html"></a></li>
-      <li><a href="index.html"></a></li>
-      <li><a href="index.html"></a></li>
-      <li><a href="index.html"></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html">Contact</a></li>
     </ul>
   </nav>
 
-  <div class ="quiz-container" id="quiz">
-    <h2 id="question">Question text</h2>
-    <div class="options" id="options"></div>
-    <p id ="progress"></p>
-    <a href ="about.html" class="btn-about">About us</a>
-  </div>
-  <div id ="prize-ladder" class="ladder"></div>
-  <div class="PrizeDisplay id=prizeDisplay></div>
+ 
 
+  <div class="start-screen">
+    <div class="start-content">
+      <h1>🎮 Welcome to the Quiz!</h1>
+      <p>Press <strong>Enter</strong> to start</p>
     </div>
-    </div>
-      
+  </div>
+
+  <div class="quiz-container" id="quiz" style="display:none;">
+
     
-  <script src="main.js></script>
-  
+
+    <section id="question-screen" class="screen" style="display:none;">
+      <h2 id="question">Question text</h2>
+      <div class="options" id="options"></div>
+      <p id="progress"></p>
+    </section>
+
+    <section id="result-screen" class="screen" style="display:none;">
+      <h2 id="result-title">Quiz Finished!</h2>
+      <p id="result-score"></p>
+      <p id="result-prize"></p>
+      <p id="result-message"></p>
+
+     
+    </section>
+
+    <a href="about.html" class="btn-about">About us</a>
+  </div>
+
+  <div id="prizeDisplay" class="PrizeDisplay"></div>
+
+  <div id="prize-ladder" class="ladder"></div>
+
+  <audio id="correctSound" src="c.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="d.mp3" preload="auto"></audio>
+
+  <script src="main.js"></script>
+
 </body>
+</html>
+
+
